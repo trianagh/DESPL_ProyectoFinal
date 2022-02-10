@@ -45,13 +45,14 @@
 #tabla .total{
 
 } */
-.copyr
+
 
 footer a span {
 color: black;
 }
 ul.menu{
     background-color: #fafafa;
+    font-weight: bold;
 }
 
 footer {
@@ -77,8 +78,46 @@ footer {
 }
 
 a{
-    color:black
+    color:black;
 }
+
+
+a:hover{
+    color:grey;
+    
+}
+
+ul.menu > li a:hover{
+    color: grey;
+}
+   
+ footer .footer_links ul li a:hover{
+     color: grey;
+}
+
+header .user-utils > div > a i{
+    color: black; 
+    margin-right: 8px;
+}
+header .user-utils > div > #my-account i{
+    color: black; 
+    margin-right: 5px;
+}
+
+@media(max-width: 460px){
+
+    /* .bolso{
+
+        display: none;
+    } */
+
+    .descripcion{
+        display: none;
+    }
+}
+
+
+
 
 
 
