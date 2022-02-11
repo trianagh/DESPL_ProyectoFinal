@@ -1,41 +1,53 @@
-function flyToElement(flyer, flyingTo) {
-    var $func = $(this);
-    var divider = 3;
-    var flyerClone = $(flyer).clone();
-    $(flyerClone).css({position: 'absolute', top: $(flyer).offset().top + "px", left: $(flyer).offset().left + "px", opacity: 1, 'z-index': 1000});
-    $('body').append($(flyerClone));
-    var gotoX = $(flyingTo).offset().left + ($(flyingTo).width() / 2) - ($(flyer).width()/divider)/2;
-    var gotoY = $(flyingTo).offset().top + ($(flyingTo).height() / 2) - ($(flyer).height()/divider)/2;
-     
-    $(flyerClone).animate({
-        opacity: 0.4,
-        left: gotoX,
-        top: gotoY,
-        width: $(flyer).width()/divider,
-        height: $(flyer).height()/divider
-    }, 700,
-    function () {
-        $(flyingTo).fadeOut('fast', function () {
-            $(flyingTo).fadeIn('fast', function () {
-                $(flyerClone).fadeOut('fast', function () {
-                    $(flyerClone).remove();
-                });
-            });
-        });
+function suma() {
+
+    var gv = 2.99;
+    var total=0; 
+    var productos=0;  
+   
+    
+    $(".bolsos tr").each(function () {
+        if (!$(this).hasClass("fila_princ")) {
+            total += parseFloat($(this).find(".producto").text());
+            productos++;  
+               
+        }      
+
     });
+    
+    preciofinal=(total+gv).toFixed(2);
+    $(".total").text(preciofinal);
+    $(".num_cart").text(productos);
+
+    if(total==0){
+        $(".total").text("No hay productos");
+        $(".gastos_envio").hide();         
+    }
+
+
 }
 
-
-
-
-$(document).ready(function(){
-    $('.add-to-cart').on('click',function(){
-        //Scroll to top if cart icon is hidden on top
-        $('html, body').animate({
-            'scrollTop' : $(".cart_anchor").position().top
-        });
-        //Select item image and pass to the function
-        var itemImg = $(this).parent().find('img').eq(0);
-        flyToElement($(itemImg), $('.cart_anchor'));
+$(document).ready(function () {
+    suma();
+    $(".eliminar1").click(function () {
+        $(".fila1").remove();
+        suma();
     });
+
+    $(".eliminar2").click(function () {
+        $(".fila2").remove();
+        suma();
+    });
+    $(document).scroll(function () {
+        
+        if ($(this).scrollTop() > 0) {
+            $('#totop').fadeIn(500);
+        } else {
+            $('#totop').fadeOut(500);
+        }
+    });
+    $('#totop').click(function () {
+        
+        $("html, body").animate({ scrollTop: 0 }, 600);
+    });
+    
 });
