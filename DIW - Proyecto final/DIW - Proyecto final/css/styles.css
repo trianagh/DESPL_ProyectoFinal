@@ -45,14 +45,13 @@
 #tabla .total{
 
 } */
-
+.copyr
 
 footer a span {
 color: black;
 }
 ul.menu{
     background-color: #fafafa;
-    font-weight: bold;
 }
 
 footer {
@@ -64,8 +63,8 @@ footer {
 
 
 .table{
-    border: black;
-    font-family: 'Baloo 2';
+    background-color: #fafafa;
+    font-family: 'Baloo 2', cursive;
 }
 
 .bolsos{
@@ -78,61 +77,8 @@ footer {
 }
 
 a{
-    color:black;
+    color:black
 }
-
-
-a:hover{
-    color:grey;
-    
-}
-
-ul.menu > li a:hover{
-    color: grey;
-}
-   
- footer .footer_links ul li a:hover{
-     color: grey;
-}
-
-header .user-utils > div > a i{
-    color: black; 
-    margin-right: 8px;
-}
-header .user-utils > div > #my-account i{
-    color: black; 
-    margin-right: 5px;
-}
-
-#totop {
-    font-size: 25px;
-    right: -4px;
-    display: none;
-    bottom: 80px;
-    height: 44px;
-    width: 44px;
-    z-index: 1;
-    cursor: pointer;
-    position: fixed;
-}
-
-#totop i {
-    color: black;
-}
-
-@media(max-width: 460px){
-
-   
-
-    .descripcion{
-        display: none;
-    }
-}
-
-
-
-
-
 
 
 
