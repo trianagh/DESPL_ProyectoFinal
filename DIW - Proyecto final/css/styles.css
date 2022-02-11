@@ -64,8 +64,8 @@ footer {
 
 
 .table{
-    background-color: #fafafa;
-    font-family: 'Baloo 2', cursive;
+    border: black;
+    font-family: 'Baloo 2';
 }
 
 .bolsos{
@@ -104,17 +104,32 @@ header .user-utils > div > #my-account i{
     margin-right: 5px;
 }
 
+#totop {
+    font-size: 25px;
+    right: -4px;
+    display: none;
+    bottom: 80px;
+    height: 44px;
+    width: 44px;
+    z-index: 1;
+    cursor: pointer;
+    position: fixed;
+}
+
+#totop i {
+    color: black;
+}
+
 @media(max-width: 460px){
 
-    /* .bolso{
-
-        display: none;
-    } */
+   
 
     .descripcion{
         display: none;
     }
 }
+
+
 
 
 
