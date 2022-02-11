@@ -105,6 +105,8 @@ footer a span {
     #totop i {
         color: black;
     }
+    header .user-utils #shopping-cart > span {
+        background:#b71800;}
     
     @media(max-width: 460px){
     
